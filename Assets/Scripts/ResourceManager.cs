@@ -9,17 +9,23 @@ namespace AssemblyCSharp
 		public Texture[] blockImg;
 		public Texture[] buttonImg;
 		public Texture[] buffBlockImg; //버프버튼사용시추가
+		public Texture[] debuffBlockImg;
+		public Texture grayBlock;
+		public Texture statBar;
 
 		public ResourceManager ()
 		{
 		}
-		public void setResourceManager(int maxColorN, int maxBuffN)
+		public void setResourceManager(int maxColorN, int maxBuffN, int maxDebuffN)
 		{
 			bg = new Texture ();
 			if(bg=Resources.Load ("ingame/gameBg") as Texture);
-			else Debug.Log ("bg Load Faile!");
 			blockImg = new Texture[maxColorN];
+			grayBlock = new Texture ();
+			if(grayBlock=Resources.Load ("ingame/block/block_whole_0010") as Texture);
+			else Debug.Log ("grayB Load Faile!");
 			buttonImg = new Texture[maxColorN];
+			debuffBlockImg = new Texture[maxDebuffN];
 			for (int i=0; i<maxColorN; i++) {
 				if(blockImg[i] = Resources.Load ("ingame/block/block_whole_000" + i) as Texture);
 				else Debug.Log ("blockImg Load Failed! : "+i);
@@ -30,6 +36,13 @@ namespace AssemblyCSharp
 				if(buffBlockImg[i]=(Texture) Resources.Load ("ingame/block/block_buff_0"+i)as Texture);
 				else Debug.Log ("buffBlockImg Load Failed! : "+i);
 			}
+			for (int i=0; i<maxDebuffN; i++) {
+				if(debuffBlockImg[i]=(Texture) Resources.Load ("ingame/block/block_debuff_0"+i)as Texture);
+				else Debug.Log ("debuffBlockImg Load Failed! : "+i);
+			}
+			statBar = new Texture ();
+			if(statBar=Resources.Load ("ingame/bar_status") as Texture);
+			else Debug.Log ("STbar Load Faile!");
 		}
 
 		public Texture getBg(){

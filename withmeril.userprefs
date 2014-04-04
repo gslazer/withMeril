@@ -1,18 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameController.cs">
     <Files>
+      <File FileName="Assets\Scripts\CBattleRoom.cs" Line="66" Column="64" />
       <File FileName="Assets\Scripts\InputController.cs" Line="11" Column="2" />
-      <File FileName="Assets\Scripts\ResourceManager.cs" Line="47" Column="3" />
-      <File FileName="Assets\Scripts\GameController.cs" Line="28" Column="27" />
-      <File FileName="Assets\Scripts\CBattleRoom.cs" Line="25" Column="32" />
+      <File FileName="Assets\Scripts\ResourceManager.cs" Line="23" Column="38" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="120" Column="8" />
+      <File FileName="Assets\Scripts\CBattleRoom.cs" Line="92" Column="1" />
+      <File FileName="Assets\Scripts\CMainTitle.cs" Line="28" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
-              <Node name="InputController.cs" selected="True" />
+              <Node name="GameController.cs" selected="True" />
             </Node>
           </Node>
         </State>
