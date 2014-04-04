@@ -126,7 +126,6 @@ namespace AssemblyCSharp
 			else
 				return false;
 		}
-
 		void debuffReverse ()
 		{
 			int temp;

@@ -19,30 +19,24 @@ namespace AssemblyCSharp
 		public void setResourceManager(int maxColorN, int maxBuffN, int maxDebuffN)
 		{
 			bg = new Texture ();
-			if(bg=Resources.Load ("ingame/gameBg") as Texture);
+			bg=Resources.Load ("ingame/gameBg") as Texture;
 			blockImg = new Texture[maxColorN];
 			grayBlock = new Texture ();
-			if(grayBlock=Resources.Load ("ingame/block/block_whole_0010") as Texture);
-			else Debug.Log ("grayB Load Faile!");
+			grayBlock=Resources.Load ("ingame/block/block_whole_0010") as Texture;
 			buttonImg = new Texture[maxColorN];
 			debuffBlockImg = new Texture[maxDebuffN];
 			for (int i=0; i<maxColorN; i++) {
-				if(blockImg[i] = Resources.Load ("ingame/block/block_whole_000" + i) as Texture);
-				else Debug.Log ("blockImg Load Failed! : "+i);
-				if(	buttonImg[i]=(Texture) Resources.Load ("ingame/button/button_000"+i) as Texture);
-				else Debug.Log ("buttonImg Load Failed! : "+i);
+				blockImg[i] = (Texture) Resources.Load ("ingame/block/block_whole_000" + i) as Texture;
+				buttonImg[i]=(Texture) Resources.Load ("ingame/button/button_000"+i) as Texture;
 			}
 			for (int i=0; i<maxBuffN; i++) {
-				if(buffBlockImg[i]=(Texture) Resources.Load ("ingame/block/block_buff_0"+i)as Texture);
-				else Debug.Log ("buffBlockImg Load Failed! : "+i);
+				buffBlockImg[i]=(Texture) Resources.Load ("ingame/block/block_buff_0"+i)as Texture;
 			}
 			for (int i=0; i<maxDebuffN; i++) {
-				if(debuffBlockImg[i]=(Texture) Resources.Load ("ingame/block/block_debuff_0"+i)as Texture);
-				else Debug.Log ("debuffBlockImg Load Failed! : "+i);
+				debuffBlockImg[i]=(Texture) Resources.Load ("ingame/block/block_debuff_0"+i)as Texture;
 			}
 			statBar = new Texture ();
-			if(statBar=Resources.Load ("ingame/bar_status") as Texture);
-			else Debug.Log ("STbar Load Faile!");
+			statBar=Resources.Load ("ingame/bar_status") as Texture;
 		}
 
 		public Texture getBg(){
